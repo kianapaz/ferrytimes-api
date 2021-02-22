@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 
 # Took this off of beautiful soup documentation
 def make_soup(url):
+    # Changed verify=False to true
     res = requests.get(url, verify=True)
     html_content = res.text
     soup_object = BeautifulSoup(html_content , "html.parser")
